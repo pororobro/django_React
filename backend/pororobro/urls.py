@@ -18,5 +18,5 @@ from django.urls import path
 from django.urls import path
 from .common.views import Hello
 urlpatterns = [
-    path('', Hello.as_view()),
+    path('hello', Hello.as_view()),
 ]
