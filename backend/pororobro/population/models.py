@@ -19,24 +19,16 @@ class Service(Reader):
         pop = self.population
         f.context = './data/'
         f.fname = '05. population_raw_data'
-        pop = r.xls(f)
+        pop = r.xls(f, 1, None)
         pop.fillna(method='pad', inplace=True)
         pop.rename(columns={'행정구역(동읍면)별(1)': '광역시도',
                                    '행정구역(동읍면)별(2)': '시도',
                                    '계': '인구수'}, inplace=True)
 
         pop = pop[(pop['시도'] != '소계')]
-
         print(pop)
 
 
-
-
-
-
-
-
-
-
+Service().organize_population_data()
 
 
