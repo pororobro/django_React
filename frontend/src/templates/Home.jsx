@@ -1,5 +1,5 @@
 import { useEffect } from "react/cjs/react.production.min";
-import React, (useEffect) from 'react'
+import React, {useEffect} from 'react'
 import axios from 'axios';
 
 

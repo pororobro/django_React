@@ -1,4 +1,4 @@
 djangorestframework==3.1.8
-pillow==8.2.0
-html5lib==1.1
+Pillow==8.2.0
 crispy-forms-gds==0.2.2
+yfinance==0.1.59

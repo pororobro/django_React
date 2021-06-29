@@ -2,13 +2,11 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-from pororobro import settings
 
 
 def main():
     """Run administrative tasks."""
-
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pororobro.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'monaco.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
