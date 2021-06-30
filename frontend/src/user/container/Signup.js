@@ -1,6 +1,10 @@
 import React,{useState} from 'react'
 import './Signup.css'
 import { Button } from '@material-ui/core';
+import { userSignup } from 'api';
+import { userLogin } from 'api';
+import { userHistory } from 'react-router'
+
 const SignUp = () => {
   const [userInfo, setUserInfo] = useState({
     username: '',
@@ -23,6 +27,15 @@ const SignUp = () => {
   const handleSubmit = e => {
     e.preventDefault()
     alert(`전송 클릭: ${JSON.stringify({...userInfo})}`)
+    const signupRequest = {...userInfo}
+    userSignup(signupRequest)
+    .then(res=>{
+      alert('회원가입 완료: ${res.data.result}')
+
+    })
+    .catch(err => {
+      alert ('회원가입 실패: ${err}')
+    })
   }
 
   const handleClick = e => {
