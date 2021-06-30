@@ -1,4 +1,4 @@
-export { default as Login } from 'user/components/Login'
+export { default as Login } from 'user/container/Login'
 export { default as Signup } from 'user/container/Signup'
 export { default as UserDetail } from 'user/components/UserDetail'
 export { default as UserEdit } from 'user/components/UserEdit'

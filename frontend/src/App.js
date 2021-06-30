@@ -4,6 +4,7 @@ import { Login, Signup, UserDetail, UserEdit,UserList  } from 'user'
 import { Home, User, Item, Blog, Stock} from 'templates'
 import { Nav } from 'common'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { PostWrite } from 'blog'
 import { Link } from 'react-router-dom'
 const App = () => {
   return (<div>
@@ -12,14 +13,15 @@ const App = () => {
         <Route exact path='/home' component={Home}/>
         <Redirect exact from={'/'} to={'/home'}/>
         <Route exact path='/user' component={User}/>
-        <Route exact path='/login' component={Login}/>
+        <Route exact path='/login-form' component={Login}/>
         <Route exact path='/signup-form' component={Signup}/>
         <Route exact path='/user-detail' component={UserDetail}/>
-        <Route exact path='/user-edit' component={UserEdit}/>
+        <Route exact path='/user-modify' component={UserEdit}/>
         <Route exact path='/user-list' component={UserList}/>
         <Route exact path='/item' component={Item}/>
         <Route exact path='/blog' component={Blog}/>
         <Route exact path='/stock' component={Stock}/>
+        <Route exact path='/post-register' component={PostWrite}/>
     </Router>
   </div>)
 }
