@@ -6,7 +6,7 @@ import warnings
 from common.models import FileDTO, Printer, Reader
 from matplotlib import font_manager
 
-
+'''
 class Election_19th(Reader):
 
     def __init__(self):
@@ -112,7 +112,7 @@ class Election_19th(Reader):
         map.save(f'./data_saved/election_{tar_data}.html')
 
 
-    @staticmethod
+    
     def main():
         e = Election_19th()
         while 1:
@@ -142,7 +142,7 @@ class Election_19th(Reader):
 
 Election_19th.main()
 
-'''
+
 if __name__ == '__main__':
     e = Election_19th()
     e.draw_data('moon_vs_hong', 'RdBu')

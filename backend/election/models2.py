@@ -213,7 +213,7 @@ class ElectionService(Scrapper):
         cb.set_label(datalabel)
         plt.tight_layout()
         plt.show()
-    @staticmethod
+
     def cut_char_sigu(name):
         return name if len(name) == 2 else name[:-1]
     def create_map_html(self, versus):

@@ -20,6 +20,10 @@ class Members(APIView):
         ic(serializer.errors)
         return Response(serializer.errors, status=400)
 
+class Member(APIView):
+    pass
+
+
 
 @csrf_exempt
 def member_list(request):
