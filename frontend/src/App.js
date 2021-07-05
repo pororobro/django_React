@@ -1,27 +1,35 @@
 import React from 'react'
 import { Redirect, Route } from "react-router-dom"
-import { Login, Signup, UserDetail, UserEdit,UserList  } from 'user'
-import { Home, User, Item, Blog, Stock} from 'templates'
-import { Nav } from 'common'
+import { MemberDetail, MemberList, MemberLogin, MemberModify, MemberRegister } from 'member'
+import { PostDetail, PostList, PostModify, PostRegister } from 'board'
+import { ItemDetail, ItemList, ItemModify, ItemRegister } from 'item'
+import { Home, Member, Item, Board, Stock} from 'templates'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { PostWrite } from 'blog'
-import { Link } from 'react-router-dom'
+
 const App = () => {
   return (<div>
     <Router>
-        <Nav/>
+   
         <Route exact path='/home' component={Home}/>
         <Redirect exact from={'/'} to={'/home'}/>
-        <Route exact path='/user' component={User}/>
-        <Route exact path='/login-form' component={Login}/>
-        <Route exact path='/signup-form' component={Signup}/>
-        <Route exact path='/user-detail' component={UserDetail}/>
-        <Route exact path='/user-modify' component={UserEdit}/>
-        <Route exact path='/user-list' component={UserList}/>
+        <Redirect exact from={'/member-logout'} to={'/home'}/>
+        <Route exact path='/member' component={Member}/>
+        <Route exact path='/member-detail/:id' component={MemberDetail}/>
+        <Route exact path='/member-list' component={MemberList}/>
+        <Route exact path='/member-login' component={MemberLogin}/>        
+        <Route exact path='/member-modify' component={MemberModify}/>
+        <Route exact path='/member-register' component={MemberRegister}/>
         <Route exact path='/item' component={Item}/>
-        <Route exact path='/blog' component={Blog}/>
+        <Route exact path='/item-detail' component={ItemDetail}/>
+        <Route exact path='/item-list' component={ItemList}/>
+        <Route exact path='/item-modify' component={ItemModify}/>
+        <Route exact path='/item-register' component={ItemRegister}/>
+        <Route exact path='/board' component={Board}/>
+        <Route exact path='/post-detail' component={PostDetail}/>
+        <Route exact path='/post-list' component={PostList}/>
+        <Route exact path='/post-modify' component={PostModify}/>
+        <Route exact path='/post-register' component={PostRegister}/>
         <Route exact path='/stock' component={Stock}/>
-        <Route exact path='/post-register' component={PostWrite}/>
     </Router>
   </div>)
 }
