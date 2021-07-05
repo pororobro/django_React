@@ -1,3 +1,5 @@
+'''
+
 from common.models import FileDTO, Printer, Reader
 import warnings
 warnings.filterwarnings("ignore")
@@ -21,7 +23,7 @@ else:
     print('Unknown system... sorry~~~~')
 plt.rcParams['axes.unicode_minus'] = False
 
-'''
+
 시계열 데이터 
 : 일련의 순차적으로 정해진 데이터 셋의 집합
 : 시간에 관해 순서가 매겨져 있다는 점과, 연속한 관측치는 서로 상관관계를 갖고 있다
@@ -29,7 +31,7 @@ plt.rcParams['axes.unicode_minus'] = False
 회귀분석
 : 관찰된 연속형 변수들에 대해 두 변수 사이의 모형을 구한뒤 적합도를 측정해 내는 분석 방법
 
-'''
+
 
 
 
@@ -76,12 +78,12 @@ class DataService(Reader):
         # linespace()함수는 두 수 사이를 50개의 균일한 간격의 수를 배열로 만들어준다.
         fx = np.linspace(0, time[-1], 1000)
 
-        '''
+
         polyfit(x, y, 함수의 차수)
         -> x와  y로 이루어진 그래프에서 함수의 차수의 계수를 찾아 본래 데이터의 기울기와 절편의 값과 
         유사하게 만들어 직선의 그래프로 만들어준다. 
         
-        '''
+
 
         #  1차원 다항식
         fp1 = np.polyfit(time, traffic, 1) # 1차원 다항식으로 생성 후 계수 도출
@@ -288,3 +290,5 @@ if __name__ == '__main__':
     service.seasonal()
     service.growth_model()
     service.holiday_forecast()
+    
+    '''

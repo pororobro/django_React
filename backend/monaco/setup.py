@@ -27,9 +27,9 @@ setup(
     scripts=['manage.py'],
     entry_points={
         'console_scripts': [
-            'publish = monaco.common.script:main',
-            'publish = monaco.crime.script:main',
-            'publish = monaco.gas_station.script:main',
+            'publish = common.script:main',
+            'publish = crime.script:main',
+            'publish = gas_station.script:main',
             ],
         },
     )
